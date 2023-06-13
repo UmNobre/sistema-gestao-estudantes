@@ -30,14 +30,14 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.estudanteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cursoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.notasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inserirEstudanteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listarEstudantesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estatísticasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.imprimirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gerenciadarEstudantesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.imprimirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cursoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.notasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,6 +67,43 @@
             this.estudanteToolStripMenuItem.Size = new System.Drawing.Size(82, 20);
             this.estudanteToolStripMenuItem.Text = "ESTUDANTE";
             // 
+            // inserirEstudanteToolStripMenuItem
+            // 
+            this.inserirEstudanteToolStripMenuItem.Name = "inserirEstudanteToolStripMenuItem";
+            this.inserirEstudanteToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
+            this.inserirEstudanteToolStripMenuItem.Text = "Inserir Estudante";
+            // 
+            // listarEstudantesToolStripMenuItem
+            // 
+            this.listarEstudantesToolStripMenuItem.Name = "listarEstudantesToolStripMenuItem";
+            this.listarEstudantesToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
+            this.listarEstudantesToolStripMenuItem.Text = "Listar Estudantes";
+            // 
+            // estatísticasToolStripMenuItem
+            // 
+            this.estatísticasToolStripMenuItem.Name = "estatísticasToolStripMenuItem";
+            this.estatísticasToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
+            this.estatísticasToolStripMenuItem.Text = "Estatísticas";
+            // 
+            // editaToolStripMenuItem
+            // 
+            this.editaToolStripMenuItem.Name = "editaToolStripMenuItem";
+            this.editaToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
+            this.editaToolStripMenuItem.Text = "Editar/Remover";
+            this.editaToolStripMenuItem.Click += new System.EventHandler(this.editaToolStripMenuItem_Click);
+            // 
+            // gerenciadarEstudantesToolStripMenuItem
+            // 
+            this.gerenciadarEstudantesToolStripMenuItem.Name = "gerenciadarEstudantesToolStripMenuItem";
+            this.gerenciadarEstudantesToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
+            this.gerenciadarEstudantesToolStripMenuItem.Text = "Gerenciadar Estudantes";
+            // 
+            // imprimirToolStripMenuItem
+            // 
+            this.imprimirToolStripMenuItem.Name = "imprimirToolStripMenuItem";
+            this.imprimirToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
+            this.imprimirToolStripMenuItem.Text = "Imprimir";
+            // 
             // cursoToolStripMenuItem
             // 
             this.cursoToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
@@ -81,43 +118,6 @@
             this.notasToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
             this.notasToolStripMenuItem.Text = "NOTAS";
             // 
-            // inserirEstudanteToolStripMenuItem
-            // 
-            this.inserirEstudanteToolStripMenuItem.Name = "inserirEstudanteToolStripMenuItem";
-            this.inserirEstudanteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.inserirEstudanteToolStripMenuItem.Text = "Inserir Estudante";
-            // 
-            // listarEstudantesToolStripMenuItem
-            // 
-            this.listarEstudantesToolStripMenuItem.Name = "listarEstudantesToolStripMenuItem";
-            this.listarEstudantesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.listarEstudantesToolStripMenuItem.Text = "Listar Estudantes";
-            // 
-            // estatísticasToolStripMenuItem
-            // 
-            this.estatísticasToolStripMenuItem.Name = "estatísticasToolStripMenuItem";
-            this.estatísticasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.estatísticasToolStripMenuItem.Text = "Estatísticas";
-            // 
-            // editaToolStripMenuItem
-            // 
-            this.editaToolStripMenuItem.Name = "editaToolStripMenuItem";
-            this.editaToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
-            this.editaToolStripMenuItem.Text = "Editar/Remover";
-            this.editaToolStripMenuItem.Click += new System.EventHandler(this.editaToolStripMenuItem_Click);
-            // 
-            // imprimirToolStripMenuItem
-            // 
-            this.imprimirToolStripMenuItem.Name = "imprimirToolStripMenuItem";
-            this.imprimirToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
-            this.imprimirToolStripMenuItem.Text = "Imprimir";
-            // 
-            // gerenciadarEstudantesToolStripMenuItem
-            // 
-            this.gerenciadarEstudantesToolStripMenuItem.Name = "gerenciadarEstudantesToolStripMenuItem";
-            this.gerenciadarEstudantesToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
-            this.gerenciadarEstudantesToolStripMenuItem.Text = "Gerenciadar Estudantes";
-            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -128,7 +128,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormPrincipal";
             this.Text = "SGE - Início";
-            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
