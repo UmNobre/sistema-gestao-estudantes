@@ -72,6 +72,7 @@
             this.inserirEstudanteToolStripMenuItem.Name = "inserirEstudanteToolStripMenuItem";
             this.inserirEstudanteToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
             this.inserirEstudanteToolStripMenuItem.Text = "Inserir Estudante";
+            this.inserirEstudanteToolStripMenuItem.Click += new System.EventHandler(this.inserirEstudanteToolStripMenuItem_Click);
             // 
             // listarEstudantesToolStripMenuItem
             // 

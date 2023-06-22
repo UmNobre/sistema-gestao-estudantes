@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,8 +20,8 @@ namespace sistema_gestao_estudantes
 
         private void FormInserirEstudante_Load(object sender, EventArgs e)
         {
-            FormInserirEstudante inserirEstudante = new FormInserirEstudante();
-            inserirEstudante.Show(this);
+           // FormInserirEstudante inserirEstudante = new FormInserirEstudante();
+           // inserirEstudante.Show(this);
 
         }
 
@@ -38,5 +39,82 @@ namespace sistema_gestao_estudantes
         {
 
         }
-    }
+
+        private void btnEnviarFoto_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog abrirArquivo = new OpenFileDialog();
+            abrirArquivo.Filter = "Seleciona a foto(*.jpg;*png;*gif)|*.jpg;*.png;*.gif";
+            if (abrirArquivo.ShowDialog() == DialogResult.OK)
+            {
+                pictureFoto.Image = Image.FromFile(abrirArquivo.FileName);
+            }
+        }
+
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            Estudante estudante = new Estudante();
+            string nome = textBoxNome.Text;
+            string telefone = txtBoxTelefone.Text;
+            DateTime nascimento = dateTimePickerNascimento.Value;
+            string endereco = txtBoxEndereco.Text;
+            string genero = "feminino";
+            string sobrenome = txtBoxSobrenome.Text;
+            if (buttonFeminino.Checked)
+            {
+                genero = "masculino";
+            }
+
+            MemoryStream foto = new MemoryStream();
+
+            int anoDeNascimento = dateTimePickerNascimento.Value.Year;
+            int anoAtual = DateTime.Now.Year;
+            if ((anoAtual - anoDeNascimento < 10 ||
+                (anoAtual - anoDeNascimento > 100)))
+            {
+                MessageBox.Show("A idade precisa ser entre 10 e 100 anos.",
+                    "Idade Invalida",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (Verificar())
+            {
+                pictureFoto.Image.Save(foto, pictureFoto.Image.RawFormat);
+                if (estudante.inserirEstudante(nome, sobrenome, nascimento, telefone, genero, foto))
+                {
+                    MessageBox.Show("Novo estudante cadatrado", "Sucesso!",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+
+
+
+
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void pictureFoto_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        bool Verificar()
+        {
+            if ((textBoxNome.Text.Trim() == "") || 
+                (txtBoxSobrenome.Text.Trim() == "") ||
+                (txtBoxTelefone.Text.Trim() == "") ||
+                (txtBoxEndereco.Text.Trim() == "") ||
+                (pictureFoto.Image == null))
+            {
+
+            }
+        }
+
+        private void dateTimePickerNascimento_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+    }   
 }
