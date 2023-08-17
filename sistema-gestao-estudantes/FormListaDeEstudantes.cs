@@ -20,7 +20,7 @@ namespace sistema_gestao_estudantes
 
         Estudante estudante = new Estudante();
 
-        private void botaoAtualizar(object sender, EventArgs e)
+        private void BotaoAtualizar(object sender, EventArgs e)
         {
 
         }

@@ -42,7 +42,7 @@
             this.botaoAtualizar.TabIndex = 0;
             this.botaoAtualizar.Text = "ATUALIZAR";
             this.botaoAtualizar.UseVisualStyleBackColor = true;
-            this.botaoAtualizar.Click += new System.EventHandler(this.botaoAtualizar);
+            this.botaoAtualizar.Click += new System.EventHandler(this.BotaoAtualizar);
             // 
             // dataGridViewLista
             // 
