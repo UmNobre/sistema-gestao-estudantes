@@ -150,6 +150,7 @@
             this.buttonMasculino.TabStop = true;
             this.buttonMasculino.Text = "masculinO";
             this.buttonMasculino.UseVisualStyleBackColor = true;
+            this.buttonMasculino.CheckedChanged += new System.EventHandler(this.buttonMasculino_CheckedChanged);
             // 
             // txtBoxTelefone
             // 

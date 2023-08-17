@@ -59,7 +59,7 @@ namespace sistema_gestao_estudantes
             string endereco = txtBoxEndereco.Text;
             string genero = "feminino";
             string sobrenome = txtBoxSobrenome.Text;
-            if (buttonFeminino.Checked)
+            if (buttonMasculino.Checked)
             {
                 genero = "masculino";
             }
@@ -78,10 +78,15 @@ namespace sistema_gestao_estudantes
             else if (Verificar())
             {
                 pictureFoto.Image.Save(foto, pictureFoto.Image.RawFormat);
-                if (estudante.inserirEstudante(nome, sobrenome, nascimento, telefone, genero, foto))
+                if (estudante.inserirEstudante(nome, sobrenome, nascimento, telefone, endereco, genero, foto))
                 {
                     MessageBox.Show("Novo estudante cadatrado", "Sucesso!",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("erro","Inserir estudante", 
+                       MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
 
@@ -100,6 +105,8 @@ namespace sistema_gestao_estudantes
 
         }
 
+        
+
         bool Verificar()
         {
             if ((textBoxNome.Text.Trim() == "") || 
@@ -108,11 +115,20 @@ namespace sistema_gestao_estudantes
                 (txtBoxEndereco.Text.Trim() == "") ||
                 (pictureFoto.Image == null))
             {
-
+                return false;
+            }
+            else
+            {
+                return true;
             }
         }
 
         private void dateTimePickerNascimento_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonMasculino_CheckedChanged(object sender, EventArgs e)
         {
 
         }
