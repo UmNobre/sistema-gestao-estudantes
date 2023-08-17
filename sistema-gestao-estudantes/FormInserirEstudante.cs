@@ -132,5 +132,10 @@ namespace sistema_gestao_estudantes
         {
 
         }
+
+        private void txtBoxEndereco_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }   
 }
