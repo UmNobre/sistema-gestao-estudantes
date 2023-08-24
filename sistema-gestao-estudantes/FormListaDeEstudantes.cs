@@ -20,9 +20,10 @@ namespace sistema_gestao_estudantes
 
         Estudante estudante = new Estudante();
 
+        
         private void BotaoAtualizar(object sender, EventArgs e)
         {
-
+            //atualiza a lista de estudantes 
         }
 
         private void FormListaDeEstudantes_Load(object sender, EventArgs e)
@@ -44,7 +45,7 @@ namespace sistema_gestao_estudantes
 
         private void dataGridViewLista_DoubleClick(object sender, EventArgs e)
         {
-
+            //abre o estudante selecionado
         }
     }
 }

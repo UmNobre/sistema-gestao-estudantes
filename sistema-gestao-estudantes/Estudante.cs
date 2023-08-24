@@ -81,7 +81,22 @@ namespace sistema_gestao_estudantes
         {
             MySqlCommand comando = new MySqlCommand("DELETE FROM `estudantes id` WHERE `id`= @studentid");
             comando.Parameters.Add("@studanrid", MySqlDbType.Int32).Value = id;
+
+            bancoDeDados.abrirconexao();
+
+            if (comando.ExecuteNonQuery() == 1)
+            {
+                bancoDeDados.fecharconexao();
+                return true;
+            }
+            else
+            {
+                bancoDeDados.fecharconexao();
+                return false;
+
+            }
         }
+
 
 
         public DataTable getEstudantes(MySqlCommand comando)
