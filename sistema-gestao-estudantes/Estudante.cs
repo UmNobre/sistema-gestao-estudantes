@@ -44,7 +44,7 @@ namespace sistema_gestao_estudantes
             }
         }
 
-        public bool atualizarEstudante(string nome, string sobrenome,
+        public bool atualizarEstudante(int id, string nome, string sobrenome,
             DateTime nascimento, string telefone, string genero,
             string endereco, MemoryStream foto)
         {
@@ -52,6 +52,7 @@ namespace sistema_gestao_estudantes
                 "`genero`=@gen,`telefone`=@tel,`endereco`=@end,`foto`=@fot WHERE `id` = @id)",
                 bancoDeDados.getConexao);
 
+            comando.Parameters.Add("@id", MySqlDbType.Int32).Value = id;
             comando.Parameters.Add("@nm", MySqlDbType.VarChar).Value = nome;
             comando.Parameters.Add("@sbn", MySqlDbType.VarChar).Value = sobrenome;
             comando.Parameters.Add("@nsc", MySqlDbType.Date).Value = nascimento;
@@ -74,6 +75,15 @@ namespace sistema_gestao_estudantes
 
             }
         }
+
+        // Deletar o estudante.
+        public bool deletarEstudante(int id)
+        {
+            MySqlCommand comando = new MySqlCommand("DELETE FROM `estudantes id` WHERE `id`= @studentid");
+            comando.Parameters.Add("@studanrid", MySqlDbType.Int32).Value = id;
+        }
+
+
         public DataTable getEstudantes(MySqlCommand comando)
         {
             comando.Connection = bancoDeDados.getConexao;
