@@ -18,7 +18,7 @@ namespace sistema_gestao_estudantes
             DateTime nascimento, string telefone, string genero,
             string endereco, MemoryStream foto)
         {
-            MySqlCommand comando = new MySqlCommand("INSERT INTO `estudantes id`(`nome`, `sobrenome`, `nascimento`, `genero`, `telefone`, `endereco`, `foto`) VALUES (@nm,@sbn,@nsc,@gen,@tel,@end, @fot)",
+            MySqlCommand comando = new MySqlCommand("INSERT INTO `estudantes id`(`nome`, `sobrenome`, `nascimento`, `endereco`, `telefone`, `genero`, `foto`) VALUES (@nm,@sbn,@nsc,@end,@tel,@gen, @fot)",
                 bancoDeDados.getConexao);
 
             comando.Parameters.Add("@nm", MySqlDbType.VarChar).Value = nome;
@@ -80,7 +80,7 @@ namespace sistema_gestao_estudantes
         public bool deletarEstudante(int id)
         {
             MySqlCommand comando = new MySqlCommand("DELETE FROM `estudantes id` WHERE `id`= @studentid");
-            comando.Parameters.Add("@studanrid", MySqlDbType.Int32).Value = id;
+            comando.Parameters.Add("@studentid", MySqlDbType.Int32).Value = id;
 
             bancoDeDados.abrirconexao();
 

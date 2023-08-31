@@ -78,7 +78,7 @@ namespace sistema_gestao_estudantes
             else if (Verificar())
             {
                 pictureFoto.Image.Save(foto, pictureFoto.Image.RawFormat);
-                if (estudante.inserirEstudante(nome, sobrenome, nascimento, telefone, endereco, genero, foto))
+                if (estudante.inserirEstudante(nome, sobrenome, nascimento, genero , endereco, telefone, foto))
                 {
                     MessageBox.Show("Novo estudante cadatrado", "Sucesso!",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);

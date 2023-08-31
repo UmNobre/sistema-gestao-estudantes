@@ -34,5 +34,10 @@ namespace sistema_gestao_estudantes
             FormListaDeEstudantes listaDeEstudantes = new FormListaDeEstudantes();
             listaDeEstudantes.Show(this);
         }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }

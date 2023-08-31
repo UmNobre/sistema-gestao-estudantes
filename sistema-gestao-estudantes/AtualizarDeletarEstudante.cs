@@ -46,5 +46,20 @@ namespace sistema_gestao_estudantes
         {
 
         }
+
+        private void buttonEnviarF_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog abrirArquivo = new OpenFileDialog();
+            abrirArquivo.Filter = "Seleciona a foto(*.jpg;*png;*gif)|*.jpg;*.png;*.gif";
+            if (abrirArquivo.ShowDialog() == DialogResult.OK)
+            {
+                pictureBoxFoto.Image = Image.FromFile(abrirArquivo.FileName);
+            }
+        }
+
+        private void textBoxEndereco_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
