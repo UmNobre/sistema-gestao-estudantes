@@ -265,6 +265,7 @@
             this.buttonConfirmar.TabIndex = 22;
             this.buttonConfirmar.Text = "Confirmar";
             this.buttonConfirmar.UseVisualStyleBackColor = true;
+            this.buttonConfirmar.Click += new System.EventHandler(this.buttonConfirmar_Click);
             // 
             // AtualizarDeletarEstudante
             // 
