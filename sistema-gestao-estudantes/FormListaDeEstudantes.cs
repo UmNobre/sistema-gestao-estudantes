@@ -52,9 +52,9 @@ namespace sistema_gestao_estudantes
             atualizarDeletarEstudante.textBoxNome.Text = dataGridViewLista.CurrentRow.Cells[1].Value.ToString();
             atualizarDeletarEstudante.textBoxSobrenome.Text = dataGridViewLista.CurrentRow.Cells[2].Value.ToString();
             atualizarDeletarEstudante.dateTimePickerNascimento.Value = (DateTime) dataGridViewLista.CurrentRow.Cells[3].Value;
-            atualizarDeletarEstudante.textBoxId.Text = dataGridViewLista.CurrentRow.Cells[4].Value.ToString();
+          
 
-            if (dataGridViewLista.CurrentRow.Cells[5].Value.ToString() == "Feminino")
+            if (dataGridViewLista.CurrentRow.Cells[4].Value.ToString() == "Feminino")
             {
                 atualizarDeletarEstudante.radioButtonFeminino.Checked = true;
             }
@@ -64,12 +64,12 @@ namespace sistema_gestao_estudantes
             }
 
 
-            atualizarDeletarEstudante.textBoxTelefone.Text = dataGridViewLista.CurrentRow.Cells[6].Value.ToString();
-            atualizarDeletarEstudante.textBoxEndereco.Text = dataGridViewLista.CurrentRow.Cells[7].Value.ToString();
+            atualizarDeletarEstudante.textBoxTelefone.Text = dataGridViewLista.CurrentRow.Cells[5].Value.ToString();
+            atualizarDeletarEstudante.textBoxEndereco.Text = dataGridViewLista.CurrentRow.Cells[6].Value.ToString();
 
             //foto;
             byte[] fotoDaLista;
-            fotoDaLista = (byte[])dataGridViewLista.CurrentRow.Cells[8].Value;
+            fotoDaLista = (byte[])dataGridViewLista.CurrentRow.Cells[7].Value;
             MemoryStream fotoDoEstudante = new MemoryStream(fotoDaLista);
             atualizarDeletarEstudante.pictureBoxFoto.Image = Image.FromStream(fotoDoEstudante);
             atualizarDeletarEstudante.Show();
