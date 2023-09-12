@@ -244,6 +244,7 @@
             this.buttonRemover.TabIndex = 20;
             this.buttonRemover.Text = "Remover";
             this.buttonRemover.UseVisualStyleBackColor = true;
+            this.buttonRemover.Click += new System.EventHandler(this.buttonRemover_Click);
             // 
             // buttonEnviarF
             // 

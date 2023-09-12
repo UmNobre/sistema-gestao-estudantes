@@ -54,9 +54,9 @@ namespace sistema_gestao_estudantes
         {
             Estudante estudante = new Estudante();
             string nome = textBoxNome.Text;
-            string telefone = txtBoxTelefone.Text;
+            string telefone = textBoxTelefone.Text;
             DateTime nascimento = dateTimePickerNascimento.Value;
-            string endereco = txtBoxEndereco.Text;
+            string endereco = textBoxEndereco.Text;
             string genero = "feminino";
             string sobrenome = txtBoxSobrenome.Text;
             if (buttonMasculino.Checked)
@@ -111,8 +111,8 @@ namespace sistema_gestao_estudantes
         {
             if ((textBoxNome.Text.Trim() == "") || 
                 (txtBoxSobrenome.Text.Trim() == "") ||
-                (txtBoxTelefone.Text.Trim() == "") ||
-                (txtBoxEndereco.Text.Trim() == "") ||
+                (textBoxTelefone.Text.Trim() == "") ||
+                (textBoxEndereco.Text.Trim() == "") ||
                 (pictureFoto.Image == null))
             {
                 return false;
@@ -134,6 +134,11 @@ namespace sistema_gestao_estudantes
         }
 
         private void txtBoxEndereco_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxTelefone_TextChanged(object sender, EventArgs e)
         {
 
         }

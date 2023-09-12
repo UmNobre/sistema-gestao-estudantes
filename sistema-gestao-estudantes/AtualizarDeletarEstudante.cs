@@ -13,6 +13,7 @@ namespace sistema_gestao_estudantes
 {
     public partial class AtualizarDeletarEstudante : Form
     {
+        Estudante estudante = new Estudante();
         public AtualizarDeletarEstudante()
         {
             InitializeComponent();
@@ -81,7 +82,7 @@ namespace sistema_gestao_estudantes
 
         private void buttonConfirmar_Click(object sender, EventArgs e)
         {
-            Estudante estudante = new Estudante();
+           //Estudante estudante = new Estudante();
             int id = Convert.ToInt32(textBoxId.Text);
             string nome = textBoxNome.Text;
             string telefone = textBoxTelefone.Text;
@@ -119,6 +120,11 @@ namespace sistema_gestao_estudantes
                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
+        }
+
+        private void buttonRemover_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(textBoxId.Text);
         }
     }
 }
