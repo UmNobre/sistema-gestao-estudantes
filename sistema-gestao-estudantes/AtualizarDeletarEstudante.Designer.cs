@@ -81,7 +81,6 @@
             this.buttonProcurar.TabIndex = 2;
             this.buttonProcurar.Text = "Procurar";
             this.buttonProcurar.UseVisualStyleBackColor = true;
-            this.buttonProcurar.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBoxSobrenome
             // 
@@ -121,7 +120,7 @@
             // 
             // dateTimePickerNascimento
             // 
-            this.dateTimePickerNascimento.CustomFormat = "dd/mm/aaaa";
+            this.dateTimePickerNascimento.CustomFormat = "";
             this.dateTimePickerNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePickerNascimento.Location = new System.Drawing.Point(139, 148);
             this.dateTimePickerNascimento.Name = "dateTimePickerNascimento";
