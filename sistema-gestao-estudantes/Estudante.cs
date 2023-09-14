@@ -18,7 +18,7 @@ namespace sistema_gestao_estudantes
             DateTime nascimento, string telefone, string genero,
             string endereco, MemoryStream foto)
         {
-            MySqlCommand comando = new MySqlCommand("INSERT INTO `estudantes id`(`nome`, `sobrenome`, `nascimento`, `genero`, `telefone`, `endereco`, `foto`) VALUES (@nm,@sbn,@nsc,@end,@tel,@gen, @fot)",
+            MySqlCommand comando = new MySqlCommand("INSERT INTO `estudantes id`(`nome`, `sobrenome`, `nascimento`, `genero`, `telefone`, `endereco`, `foto`) VALUES (@nm, @sbn, @nsc, @tel, @end, @gen, @fot)",
                 bancoDeDados.getConexao);
 
             comando.Parameters.Add("@nm", MySqlDbType.VarChar).Value = nome;
